@@ -1,0 +1,13 @@
+# Local env / secrets
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Runtime data (volumes are managed by Docker, not bind mounts, so usually nothing here)
+data/
+*.log
