@@ -9,7 +9,7 @@ Claude Code can emit OTLP telemetry (token usage, tool calls, session activity, 
 | Service | Image | Port | Role |
 |---|---|---|---|
 | `otel-collector` | `otel/opentelemetry-collector-contrib` | 4317 (gRPC), 4318 (HTTP), 8889 (Prom scrape) | Receive OTLP from Claude Code, fan out to Prometheus + Loki |
-| `prometheus` | `prom/prometheus` | 9090 | Scrape collector, store metrics 90 days |
+| `prometheus` | `prom/prometheus` | 14703 | Scrape collector, store metrics 90 days |
 | `loki` | `grafana/loki` | 3100 | Store logs |
 | `grafana` | `grafana/grafana` | 3000 | Dashboards (anonymous viewer enabled, admin/admin) |
 

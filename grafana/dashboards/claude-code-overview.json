@@ -1304,7 +1304,7 @@
             "type": "prometheus",
             "uid": "prometheus"
           },
-          "expr": "sum(last_over_time(claude_code_pull_request_count_total{job=~\"$job\", organization_id=~\"$organization_id\", user_email=~\"$member\"}[7d]))",
+          "expr": "sum(increase(claude_code_pull_request_count_total{job=~\"$job\", organization_id=~\"$organization_id\", user_email=~\"$member\"}[$__range]))",
           "instant": false,
           "legendFormat": "Pull Requests",
           "queryType": "range",

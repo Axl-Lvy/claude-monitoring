@@ -32,7 +32,7 @@ services:
       - '--storage.tsdb.path=/prometheus'
       - '--storage.tsdb.retention.time=90d'
     ports:
-      - "9090:9090"
+      - "14703:9090"
     restart: unless-stopped
     depends_on:
       - otel-collector
