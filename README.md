@@ -19,37 +19,25 @@ Config files:
 - `grafana/provisioning/` — auto-provisioned datasources + dashboard loader
 - `grafana/dashboards/claude-code-overview.json` — preloaded Claude Code dashboard
 
-## Usage
+## Quick start
 
-### 1. Start the stack
 ```sh
-docker compose up -d
+sh install.sh
 ```
 
-Check everything is up:
-```sh
-docker compose ps
-```
+This single script:
+1. Installs Docker if missing (requires `sudo sh install.sh` in that case)
+2. Starts the full monitoring stack via Docker Compose
+3. Adds the required OTel env vars to your shell profile (`~/.zshrc` or `~/.bashrc`)
 
-### 2. Point Claude Code at the collector
+Once done, open a new terminal (or `source ~/.zshrc`) and start Claude Code. Telemetry flows automatically.
 
-Export these in your shell (or add to `~/.zshrc` / `~/.bashrc`):
-```sh
-export CLAUDE_CODE_ENABLE_TELEMETRY=1
-export OTEL_METRICS_EXPORTER=otlp
-export OTEL_LOGS_EXPORTER=otlp
-export OTEL_EXPORTER_OTLP_PROTOCOL=grpc
-export OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4317
-```
-
-Restart Claude Code. Telemetry now flow to the collector.
-
-### 3. Open Grafana
-http://localhost:3000 — dashboard **Claude Code Overview** preloaded under *Dashboards*.
+### Open Grafana
+http://localhost:3000 -- dashboard **Claude Code Overview** preloaded under *Dashboards*.
 
 Anonymous viewer enabled (no login needed to view). Admin login: `admin` / `admin`.
 
-### 4. Stop / reset
+### Stop / reset
 ```sh
 docker compose down            # stop, keep data
 docker compose down -v         # stop + wipe Prometheus/Loki/Grafana volumes
