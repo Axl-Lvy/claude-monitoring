@@ -11,3 +11,4 @@
 # Runtime data (volumes are managed by Docker, not bind mounts, so usually nothing here)
 data/
 *.log
+.claude/settings.local.json
