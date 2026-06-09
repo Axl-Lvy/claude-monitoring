@@ -1,14 +1,16 @@
 # claude-monitoring
 
-Local OpenTelemetry stack for collecting **Claude Code** metrics, logs, and traces, then visualizing them in Grafana.
+Local OpenTelemetry stack for collecting **Claude Code** (CLI) and **Claude Cowork** (Claude Desktop) metrics, logs, and traces, then visualizing them in Grafana.
 
-Claude Code can emit OTLP telemetry (token usage, tool calls, session activity, cost, etc.) when the right env vars are set. This repo runs the receiving side: an OTel Collector, Prometheus (metrics), Loki (logs), and Grafana (dashboards) — all in Docker Compose. No data leaves the host.
+Both products can emit OTLP telemetry (token usage, tool calls, session activity, cost, etc.). This repo runs the receiving side: an OTel Collector, Prometheus (metrics), Loki (logs), and Grafana (dashboards) — all in Docker Compose. No data leaves the host.
+
+The Claude Code CLI emits both metrics (Prometheus) and log events (Loki); it is set up automatically by `install.sh`. Cowork emits log events only and is configured manually inside Claude Desktop (see [Claude Desktop (Cowork)](#claude-desktop-cowork)).
 
 ## Components
 
 | Service | Image | Port | Role |
 |---|---|---|---|
-| `otel-collector` | `otel/opentelemetry-collector-contrib` | 4317 (gRPC), 4318 (HTTP), 8889 (Prom scrape) | Receive OTLP from Claude Code, fan out to Prometheus + Loki |
+| `otel-collector` | `otel/opentelemetry-collector-contrib` | 4317 (gRPC), 4318 (HTTP), 8889 (Prom scrape) | Receive OTLP from Claude Code / Cowork, fan out to Prometheus + Loki |
 | `prometheus` | `prom/prometheus` | 14703 | Scrape collector, store metrics 90 days |
 | `loki` | `grafana/loki` | 3100 | Store logs |
 | `grafana` | `grafana/grafana` | 3000 | Dashboards (anonymous viewer enabled, admin/admin) |
@@ -17,7 +19,7 @@ Config files:
 - `otel/config.yaml` — collector pipelines (metrics → Prometheus, logs → Loki, traces → debug)
 - `prometheus/prometheus.yml` — scrapes `otel-collector:8889`
 - `grafana/provisioning/` — auto-provisioned datasources + dashboard loader
-- `grafana/dashboards/claude-code-overview.json` — preloaded Claude Code dashboard
+- `grafana/dashboards/claude-code-overview.json` — preloaded "Claude Code & Cowork" dashboard
 
 ## Quick start
 
@@ -30,10 +32,10 @@ This single script:
 2. Starts the full monitoring stack via Docker Compose
 3. Adds the required OTel env vars to your shell profile (`~/.zshrc` or `~/.bashrc`)
 
-Once done, open a new terminal (or `source ~/.zshrc`) and start Claude Code. Telemetry flows automatically.
+Once done, open a new terminal (or `source ~/.zshrc`) and start Claude Code. CLI telemetry flows automatically. For Claude Desktop / Cowork, see [Claude Desktop (Cowork)](#claude-desktop-cowork) — it is configured in the app, not by this script.
 
 ### Open Grafana
-http://localhost:3000 -- dashboard **Claude Code Overview** preloaded under *Dashboards*.
+http://localhost:3000 -- dashboard **Claude Code & Cowork** preloaded under *Dashboards*. Use the **Source** variable to view the CLI, Cowork, or both.
 
 Anonymous viewer enabled (no login needed to view). Admin login: `admin` / `admin`.
 

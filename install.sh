@@ -111,7 +111,10 @@ docker compose up -d --quiet-pull 2>/dev/null || docker compose up -d
 
 ok "Monitoring stack running"
 
-# --- Configure Claude Code env vars ---
+# --- Configure Claude Code (CLI) env vars ---
+# These configure the Claude Code CLI only. Claude Desktop / Cowork has no
+# env vars; it is configured inside the app (Organization settings > Cowork)
+# and points at this same collector on port 4318. See README.
 OTEL_BLOCK="
 # Claude Code OTel monitoring
 export CLAUDE_CODE_ENABLE_TELEMETRY=1
@@ -170,7 +173,7 @@ fi
 # --- Summary ---
 printf "\n"
 printf "${GREEN}========================================${NC}\n"
-printf "${GREEN}  Claude Code Monitoring - Ready!${NC}\n"
+printf "${GREEN}  Claude Code & Cowork Monitoring - Ready!${NC}\n"
 printf "${GREEN}========================================${NC}\n"
 printf "\n"
 printf "  Grafana:    ${CYAN}http://localhost:3000${NC}\n"
@@ -179,8 +182,15 @@ printf "  Dashboard:  ${CYAN}http://localhost:3000/dashboards${NC}\n"
 printf "\n"
 printf "  Login: admin / admin (or anonymous viewer)\n"
 printf "\n"
-printf "  ${YELLOW}Next steps:${NC}\n"
+printf "  ${YELLOW}Next steps (Claude Code CLI):${NC}\n"
 printf "  1. Open a new terminal (or run: source ~/.zshrc)\n"
 printf "  2. Start Claude Code - telemetry flows automatically\n"
 printf "  3. Open Grafana to see metrics\n"
+printf "\n"
+printf "  ${YELLOW}Optional (Claude Desktop / Cowork):${NC}\n"
+printf "  Needs a Team/Enterprise plan and Claude Desktop >= 1.1.4173.\n"
+printf "  In the app: Organization settings > Cowork, set the OTLP endpoint to\n"
+printf "  ${CYAN}http://localhost:4318${NC} (or http://<this-host>:4318 from another\n"
+printf "  machine), protocol HTTP/protobuf. Then use the Source variable in the\n"
+printf "  dashboard to view CLI, Cowork, or both.\n"
 printf "\n"
