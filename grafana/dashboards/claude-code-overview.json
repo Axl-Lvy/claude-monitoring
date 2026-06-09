@@ -5640,10 +5640,11 @@
         "options": [],
         "query": {
           "label": "service_name",
+          "refId": "LokiVariableQueryEditor-VariableQuery",
           "stream": "",
           "type": 1
         },
-        "refresh": 2,
+        "refresh": 1,
         "regex": "",
         "sort": 1,
         "type": "query"
