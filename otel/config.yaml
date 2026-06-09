@@ -11,9 +11,14 @@ processors:
     timeout: 10s
   resource:
     attributes:
+      # Only default service.name when the client did not set one.
+      # Claude Code CLI sends service.name=claude-code, Cowork sends
+      # service.name=cowork. "insert" preserves each so the dashboard
+      # can tell CLI and Cowork apart; "upsert" would clobber both to
+      # claude-code.
       - key: service.name
         value: claude-code
-        action: upsert
+        action: insert
 
 exporters:
   prometheus:

@@ -54,6 +54,20 @@ docker compose down -v         # stop + wipe Prometheus/Loki/Grafana volumes
     └── dashboards/claude-code-overview.json
 ```
 
+## Claude Desktop (Cowork)
+
+The stack also receives telemetry from **Claude Cowork** (the agentic feature in Claude Desktop), not just the Claude Code CLI. Both products emit the same five OTLP log events (`api_request`, `tool_result`, `tool_decision`, `user_prompt`, `api_error`), distinguished by the `service.name` resource attribute (`claude-code` vs `cowork`).
+
+Requirements (Anthropic side):
+- Team or Enterprise plan, Claude Desktop **>= 1.1.4173**.
+- An admin enables it in *Organization settings > Cowork*: set the OTLP endpoint to this collector (`http://<host>:4318`), pick HTTP/JSON or HTTP/protobuf, add auth headers if any.
+
+Unlike the CLI, Cowork has no env vars; config lives in the app. Cowork emits **log events only** (no Prometheus metrics), so its panels are Loki-based.
+
+In the dashboard, the **Source** variable filters by `service.name`, and the **CLI + Cowork (unified, log-based)** row shows cost, tokens, latency, tools, and MCP usage for either or both products. The original Prometheus-backed rows stay CLI-only (Cowork emits no metrics).
+
+The collector preserves each product's `service.name` (`action: insert` in `otel/config.yaml`) and only defaults it to `claude-code` when a client sends none.
+
 ## Notes
 - Prometheus retention: 90 days (`--storage.tsdb.retention.time=90d` in compose).
 - Traces currently go to the collector `debug` exporter only (printed to logs). Add a tracing backend (Tempo, Jaeger) in `otel/config.yaml` if needed.
