@@ -15,6 +15,17 @@ Local OTLP monitoring stack for **Claude Code** (CLI) and **Claude Cowork** (Cla
 
 Claude Code CLI and Cowork emit the **same five OTLP log events**: `api_request`, `tool_result`, `tool_decision`, `user_prompt`, `api_error`. They differ only by the `service.name` resource attribute: `claude-code` vs `cowork`.
 
+## Bash command-kind hook (`bash_command` event)
+
+`tool_result` carries `tool_name` but **never the command string**, so Bash calls can't be split into build / test / git / search downstream. `hooks/classify-bash-command.py` is a Claude Code **PostToolUse** hook (matcher `Bash`) that classifies the command and emits a custom OTLP log: `event_name=bash_command`, with `command_category` (test, build, lint_format, vcs, package, search_read, edit_fs, run_exec, shell_nav, other) and `command_head` as structured metadata. It POSTs to the collector at `localhost:4318/v1/logs` with `service.name=claude-code`, so it flows to Loki on the same path as native events. `install.sh` registers it idempotently in `~/.claude/settings.json`. CLI-only (Cowork can't run hooks). The "MCP tools & Bash command kinds" dashboard row reads it.
+
+To tune the classifier, mine real command samples from local session transcripts (OTLP strips them, transcripts keep them):
+
+```sh
+cat ~/.claude/projects/*/*.jsonl \
+ | jq -rc 'select(.message.content) | .message.content[]? | select(.type=="tool_use" and .name=="Bash") | .input.command | gsub("\n";" ⏎ ")'
+```
+
 - CLI emits **both** Prometheus metrics and Loki log events. Configured via env vars (`install.sh`, OTLP endpoint `localhost:4317` gRPC).
 - Cowork emits **log events only** (no metrics). Configured in Claude Desktop (Organization settings > Cowork → OTLP endpoint `http://<host>:4318`). No env vars.
 

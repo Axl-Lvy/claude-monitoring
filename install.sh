@@ -152,6 +152,49 @@ if [ -f "$REAL_HOME/.profile" ]; then
     add_to_shell_rc "$REAL_HOME/.profile"
 fi
 
+# --- Install the Bash command-classifier hook (Claude Code CLI) ---
+# Claude Code's tool_result event never carries the Bash command string, so
+# "build" vs "test" vs "git" cannot be told apart downstream. This PostToolUse
+# hook classifies each Bash command and emits a `bash_command` OTLP log to the
+# collector, which the dashboard's "Bash command kinds" panels read from.
+HOOK_SCRIPT="$SCRIPT_DIR/hooks/classify-bash-command.py"
+SETTINGS_FILE="$REAL_HOME/.claude/settings.json"
+
+if command -v python3 >/dev/null 2>&1 && [ -f "$HOOK_SCRIPT" ]; then
+    chmod +x "$HOOK_SCRIPT" 2>/dev/null || true
+    mkdir -p "$REAL_HOME/.claude"
+    HOOK_SCRIPT="$HOOK_SCRIPT" SETTINGS_FILE="$SETTINGS_FILE" python3 - <<'PYEOF'
+import json, os
+settings_file = os.environ["SETTINGS_FILE"]
+cmd = "python3 " + os.environ["HOOK_SCRIPT"]
+try:
+    with open(settings_file) as fh:
+        settings = json.load(fh)
+except (FileNotFoundError, ValueError):
+    settings = {}
+hooks = settings.setdefault("hooks", {})
+post = hooks.setdefault("PostToolUse", [])
+already = any(
+    h.get("command") == cmd
+    for entry in post
+    for h in entry.get("hooks", [])
+)
+if not already:
+    post.append({"matcher": "Bash", "hooks": [{"type": "command", "command": cmd}]})
+    with open(settings_file, "w") as fh:
+        json.dump(settings, fh, indent=2)
+    print("added")
+else:
+    print("present")
+PYEOF
+    if $IS_ROOT; then
+        chown -R "$REAL_USER":"$(id -gn "$REAL_USER")" "$REAL_HOME/.claude" 2>/dev/null || true
+    fi
+    ok "Bash command-classifier hook registered in $SETTINGS_FILE"
+else
+    warn "python3 not found or hook script missing; skipping Bash classifier hook"
+fi
+
 # --- Wait for services ---
 info "Waiting for services to be ready..."
 TRIES=0
