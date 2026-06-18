@@ -5617,7 +5617,7 @@
             "uid": "loki"
           },
           "editorMode": "code",
-          "expr": "topk(15, sum by (tool_name) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`tool_result` | tool_result_size_bytes!=\"\" | unwrap tool_result_size_bytes [$__range])))",
+          "expr": "(topk(15, sum by (tool_name) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`tool_result` | tool_result_size_bytes!=\"\" | unwrap tool_result_size_bytes [$__range])))) / 4",
           "queryType": "instant",
           "refId": "A",
           "legendFormat": "{{tool_name}}"
@@ -5628,7 +5628,7 @@
           "color": {
             "mode": "palette-classic"
           },
-          "unit": "bytes"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -5691,7 +5691,7 @@
             "uid": "loki"
           },
           "editorMode": "code",
-          "expr": "sum by (command_category) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`bash_command` | result_size_bytes!=\"\" | unwrap result_size_bytes [$__range]))",
+          "expr": "(sum by (command_category) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`bash_command` | result_size_bytes!=\"\" | unwrap result_size_bytes [$__range]))) / 4",
           "queryType": "instant",
           "refId": "A",
           "legendFormat": "{{command_category}}"
@@ -5702,7 +5702,7 @@
           "color": {
             "mode": "palette-classic"
           },
-          "unit": "bytes"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -5765,7 +5765,7 @@
             "uid": "loki"
           },
           "editorMode": "code",
-          "expr": "sum by (mcp_server_name) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`tool_result` | mcp_server_name!=\"\" | tool_result_size_bytes!=\"\" | unwrap tool_result_size_bytes [$__range]))",
+          "expr": "(sum by (mcp_server_name) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`tool_result` | mcp_server_name!=\"\" | tool_result_size_bytes!=\"\" | unwrap tool_result_size_bytes [$__range]))) / 4",
           "queryType": "instant",
           "refId": "A",
           "legendFormat": "{{mcp_server_name}}"
@@ -5776,7 +5776,7 @@
           "color": {
             "mode": "palette-classic"
           },
-          "unit": "bytes"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -5839,7 +5839,7 @@
             "uid": "loki"
           },
           "editorMode": "code",
-          "expr": "sum by (command_category) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`bash_command` | result_size_bytes!=\"\" | unwrap result_size_bytes [$__range]))",
+          "expr": "(sum by (command_category) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`bash_command` | result_size_bytes!=\"\" | unwrap result_size_bytes [$__range]))) / 4",
           "queryType": "instant",
           "refId": "A"
         }
@@ -5856,7 +5856,7 @@
               "Time": true
             },
             "renameByName": {
-              "Value": "result bytes (~tokens)"
+              "Value": "~tokens"
             }
           }
         }
@@ -5866,7 +5866,7 @@
           "color": {
             "mode": "thresholds"
           },
-          "unit": "bytes"
+          "unit": "short"
         },
         "overrides": []
       },
@@ -5902,7 +5902,7 @@
             "uid": "loki"
           },
           "editorMode": "code",
-          "expr": "sum by (mcp_server_name, tool_name) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`tool_result` | mcp_server_name!=\"\" | tool_result_size_bytes!=\"\" | unwrap tool_result_size_bytes [$__range]))",
+          "expr": "(sum by (mcp_server_name, tool_name) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`tool_result` | mcp_server_name!=\"\" | tool_result_size_bytes!=\"\" | unwrap tool_result_size_bytes [$__range]))) / 4",
           "queryType": "instant",
           "refId": "A"
         }
@@ -5919,7 +5919,7 @@
               "Time": true
             },
             "renameByName": {
-              "Value": "result bytes (~tokens)"
+              "Value": "~tokens"
             }
           }
         }
@@ -5929,7 +5929,7 @@
           "color": {
             "mode": "thresholds"
           },
-          "unit": "bytes"
+          "unit": "short"
         },
         "overrides": []
       },
