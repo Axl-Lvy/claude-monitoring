@@ -135,12 +135,24 @@ def emit(category: str, payload: dict, command: str) -> None:
     if isinstance(tool_resp, dict) and tool_resp.get("is_error"):
         success = "false"
 
+    # Byte sizes mirror Claude Code's own tool_result_size_bytes /
+    # tool_input_size_bytes. The result bytes are what re-enters the
+    # conversation as input tokens next turn, so result_size_bytes is the
+    # token-weight of this command kind (tokens ~= bytes / 4). The dashboard
+    # sums it per command_category to get a token-share percentage.
+    try:
+        result_bytes = len(json.dumps(tool_resp))
+    except Exception:
+        result_bytes = 0
+
     attrs = [
         ("event_name", "bash_command"),
         ("command_category", category),
         ("command_head", command_head(command)),
         ("success", success),
         ("session_id", str(payload.get("session_id", ""))),
+        ("result_size_bytes", str(result_bytes)),
+        ("input_size_bytes", str(len(command))),
     ]
     log_record = {
         # Collector stamps observed time; omit a client clock to stay simple.

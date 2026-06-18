@@ -2973,7 +2973,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 85
+        "y": 101
       },
       "id": 40,
       "panels": [],
@@ -3013,7 +3013,7 @@
         "h": 3,
         "w": 7,
         "x": 0,
-        "y": 86
+        "y": 102
       },
       "id": 41,
       "options": {
@@ -3113,7 +3113,7 @@
         "h": 10,
         "w": 8,
         "x": 7,
-        "y": 86
+        "y": 102
       },
       "id": 42,
       "options": {
@@ -3214,7 +3214,7 @@
         "h": 10,
         "w": 9,
         "x": 15,
-        "y": 86
+        "y": 102
       },
       "id": 43,
       "options": {
@@ -3282,7 +3282,7 @@
         "h": 7,
         "w": 7,
         "x": 0,
-        "y": 89
+        "y": 105
       },
       "id": 44,
       "options": {
@@ -3395,7 +3395,7 @@
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 96
+        "y": 112
       },
       "id": 87,
       "options": {
@@ -3518,7 +3518,7 @@
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 103
+        "y": 119
       },
       "id": 45,
       "options": {
@@ -3574,7 +3574,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 111
+        "y": 127
       },
       "id": 20,
       "panels": [],
@@ -3613,7 +3613,7 @@
         "h": 4,
         "w": 6,
         "x": 0,
-        "y": 112
+        "y": 128
       },
       "id": 21,
       "options": {
@@ -3680,7 +3680,7 @@
         "h": 4,
         "w": 6,
         "x": 6,
-        "y": 112
+        "y": 128
       },
       "id": 22,
       "options": {
@@ -3747,7 +3747,7 @@
         "h": 4,
         "w": 6,
         "x": 12,
-        "y": 112
+        "y": 128
       },
       "id": 23,
       "options": {
@@ -3814,7 +3814,7 @@
         "h": 4,
         "w": 6,
         "x": 18,
-        "y": 112
+        "y": 128
       },
       "id": 24,
       "options": {
@@ -3916,7 +3916,7 @@
         "h": 10,
         "w": 24,
         "x": 0,
-        "y": 116
+        "y": 132
       },
       "id": 93,
       "options": {
@@ -3983,7 +3983,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 126
+        "y": 142
       },
       "id": 25,
       "options": {
@@ -4092,7 +4092,7 @@
         "h": 8,
         "w": 16,
         "x": 8,
-        "y": 126
+        "y": 142
       },
       "id": 26,
       "options": {
@@ -4155,7 +4155,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 134
+        "y": 150
       },
       "id": 27,
       "options": {
@@ -4229,7 +4229,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 134
+        "y": 150
       },
       "id": 28,
       "options": {
@@ -4342,7 +4342,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 142
+        "y": 158
       },
       "id": 91,
       "options": {
@@ -4474,7 +4474,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 142
+        "y": 158
       },
       "id": 85,
       "options": {
@@ -4527,7 +4527,7 @@
         "h": 11,
         "w": 24,
         "x": 0,
-        "y": 150
+        "y": 166
       },
       "id": 84,
       "options": {
@@ -4576,7 +4576,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 161
+        "y": 177
       },
       "id": 100,
       "panels": [],
@@ -4612,7 +4612,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 162
+        "y": 178
       },
       "id": 101,
       "options": {
@@ -4686,7 +4686,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 162
+        "y": 178
       },
       "id": 102,
       "options": {
@@ -4739,7 +4739,7 @@
       "title": "CLI + Cowork (unified, log-based)",
       "gridPos": {
         "x": 0,
-        "y": 171,
+        "y": 187,
         "w": 24,
         "h": 1
       },
@@ -4755,7 +4755,7 @@
       },
       "gridPos": {
         "x": 0,
-        "y": 172,
+        "y": 188,
         "w": 4,
         "h": 4
       },
@@ -4802,7 +4802,7 @@
       },
       "gridPos": {
         "x": 4,
-        "y": 172,
+        "y": 188,
         "w": 4,
         "h": 4
       },
@@ -4849,7 +4849,7 @@
       },
       "gridPos": {
         "x": 8,
-        "y": 172,
+        "y": 188,
         "w": 4,
         "h": 4
       },
@@ -4896,7 +4896,7 @@
       },
       "gridPos": {
         "x": 12,
-        "y": 172,
+        "y": 188,
         "w": 4,
         "h": 4
       },
@@ -4943,7 +4943,7 @@
       },
       "gridPos": {
         "x": 16,
-        "y": 172,
+        "y": 188,
         "w": 4,
         "h": 4
       },
@@ -4990,7 +4990,7 @@
       },
       "gridPos": {
         "x": 20,
-        "y": 172,
+        "y": 188,
         "w": 4,
         "h": 4
       },
@@ -5037,7 +5037,7 @@
       },
       "gridPos": {
         "x": 0,
-        "y": 176,
+        "y": 192,
         "w": 12,
         "h": 8
       },
@@ -5079,7 +5079,7 @@
       },
       "gridPos": {
         "x": 12,
-        "y": 176,
+        "y": 192,
         "w": 12,
         "h": 8
       },
@@ -5143,7 +5143,7 @@
       },
       "gridPos": {
         "x": 0,
-        "y": 184,
+        "y": 200,
         "w": 12,
         "h": 8
       },
@@ -5185,7 +5185,7 @@
       },
       "gridPos": {
         "x": 12,
-        "y": 184,
+        "y": 200,
         "w": 12,
         "h": 8
       },
@@ -5238,7 +5238,7 @@
       },
       "gridPos": {
         "x": 0,
-        "y": 192,
+        "y": 208,
         "w": 8,
         "h": 8
       },
@@ -5292,7 +5292,7 @@
       },
       "gridPos": {
         "x": 8,
-        "y": 192,
+        "y": 208,
         "w": 8,
         "h": 8
       },
@@ -5346,7 +5346,7 @@
       },
       "gridPos": {
         "x": 16,
-        "y": 192,
+        "y": 208,
         "w": 8,
         "h": 8
       },
@@ -5422,7 +5422,7 @@
       },
       "gridPos": {
         "x": 0,
-        "y": 200,
+        "y": 216,
         "w": 12,
         "h": 8
       },
@@ -5466,7 +5466,7 @@
       },
       "gridPos": {
         "x": 12,
-        "y": 200,
+        "y": 216,
         "w": 12,
         "h": 8
       },
@@ -5510,7 +5510,7 @@
       },
       "gridPos": {
         "x": 0,
-        "y": 208,
+        "y": 224,
         "w": 8,
         "h": 8
       },
@@ -5563,7 +5563,7 @@
       },
       "gridPos": {
         "x": 8,
-        "y": 208,
+        "y": 224,
         "w": 16,
         "h": 8
       },
@@ -5596,21 +5596,9 @@
       }
     },
     {
-      "id": 1100,
-      "title": "MCP tools & Bash command kinds (log-based, CLI + Cowork)",
-      "type": "row",
-      "collapsed": false,
-      "gridPos": {
-        "x": 0,
-        "y": 216,
-        "w": 24,
-        "h": 1
-      },
-      "panels": []
-    },
-    {
       "id": 1101,
-      "title": "Bash commands by kind",
+      "title": "Token share by tool",
+      "description": "Token share proxy: sums tool_result_size_bytes, the result payload that re-enters context as input tokens next turn (~bytes/4). Pie % = share of tokens. Tool calls carry no real token field, this is the closest signal.",
       "type": "piechart",
       "datasource": {
         "type": "loki",
@@ -5618,7 +5606,7 @@
       },
       "gridPos": {
         "x": 0,
-        "y": 217,
+        "y": 85,
         "w": 8,
         "h": 9
       },
@@ -5629,10 +5617,10 @@
             "uid": "loki"
           },
           "editorMode": "code",
-          "expr": "sum by (command_category) (count_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`bash_command` [$__range]))",
+          "expr": "topk(15, sum by (tool_name) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`tool_result` | tool_result_size_bytes!=\"\" | unwrap tool_result_size_bytes [$__range])))",
           "queryType": "instant",
           "refId": "A",
-          "legendFormat": "{{command_category}}"
+          "legendFormat": "{{tool_name}}"
         }
       ],
       "fieldConfig": {
@@ -5640,13 +5628,13 @@
           "color": {
             "mode": "palette-classic"
           },
-          "unit": "short"
+          "unit": "bytes"
         },
         "overrides": []
       },
       "options": {
         "legend": {
-          "displayMode": "list",
+          "displayMode": "table",
           "placement": "right",
           "values": [
             "percent",
@@ -5665,167 +5653,16 @@
     },
     {
       "id": 1102,
-      "title": "Bash command kinds over time",
-      "type": "timeseries",
-      "datasource": {
-        "type": "loki",
-        "uid": "loki"
-      },
-      "gridPos": {
-        "x": 8,
-        "y": 217,
-        "w": 16,
-        "h": 9
-      },
-      "targets": [
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "loki"
-          },
-          "editorMode": "code",
-          "expr": "sum by (command_category) (count_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`bash_command` [$__interval]))",
-          "queryType": "range",
-          "refId": "A",
-          "legendFormat": "{{command_category}}"
-        }
-      ],
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "unit": "short",
-          "custom": {
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "stacking": {
-              "mode": "normal"
-            }
-          }
-        },
-        "overrides": []
-      },
-      "options": {
-        "legend": {
-          "displayMode": "list",
-          "placement": "bottom"
-        },
-        "tooltip": {
-          "mode": "multi"
-        }
-      }
-    },
-    {
-      "id": 1103,
-      "title": "Bash command kinds (volume)",
-      "type": "barchart",
-      "datasource": {
-        "type": "loki",
-        "uid": "loki"
-      },
-      "gridPos": {
-        "x": 0,
-        "y": 226,
-        "w": 12,
-        "h": 8
-      },
-      "targets": [
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "loki"
-          },
-          "editorMode": "code",
-          "expr": "sum by (command_category) (count_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`bash_command` [$__range]))",
-          "queryType": "instant",
-          "refId": "A",
-          "legendFormat": "{{command_category}}"
-        }
-      ],
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "palette-classic"
-          },
-          "unit": "short"
-        },
-        "overrides": []
-      },
-      "options": {
-        "orientation": "horizontal",
-        "showValue": "auto",
-        "legend": {
-          "showLegend": false
-        }
-      }
-    },
-    {
-      "id": 1104,
-      "title": "Top Bash programs by kind",
-      "type": "table",
-      "datasource": {
-        "type": "loki",
-        "uid": "loki"
-      },
-      "gridPos": {
-        "x": 12,
-        "y": 226,
-        "w": 12,
-        "h": 8
-      },
-      "targets": [
-        {
-          "datasource": {
-            "type": "loki",
-            "uid": "loki"
-          },
-          "editorMode": "code",
-          "expr": "topk(25, sum by (command_category, command_head) (count_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`bash_command` [$__range])))",
-          "queryType": "instant",
-          "refId": "A"
-        }
-      ],
-      "transformations": [
-        {
-          "id": "labelsToFields",
-          "options": {}
-        },
-        {
-          "id": "organize",
-          "options": {
-            "excludeByName": {
-              "Time": true
-            },
-            "renameByName": {
-              "Value": "calls"
-            }
-          }
-        }
-      ],
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          }
-        },
-        "overrides": []
-      },
-      "options": {
-        "showHeader": true
-      }
-    },
-    {
-      "id": 1105,
-      "title": "Calls by MCP server",
+      "title": "Token share by Bash command kind",
+      "description": "Token share by Bash command kind (build/test/git/...). Needs the classify-bash-command.py PostToolUse hook. Token share proxy: sums tool_result_size_bytes, the result payload that re-enters context as input tokens next turn (~bytes/4). Pie % = share of tokens. Tool calls carry no real token field, this is the closest signal.",
       "type": "piechart",
       "datasource": {
         "type": "loki",
         "uid": "loki"
       },
       "gridPos": {
-        "x": 0,
-        "y": 234,
+        "x": 8,
+        "y": 85,
         "w": 8,
         "h": 9
       },
@@ -5836,10 +5673,10 @@
             "uid": "loki"
           },
           "editorMode": "code",
-          "expr": "sum by (mcp_server_name) (count_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`tool_result` | mcp_server_name!=\"\" [$__range]))",
+          "expr": "sum by (command_category) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`bash_command` | result_size_bytes!=\"\" | unwrap result_size_bytes [$__range]))",
           "queryType": "instant",
           "refId": "A",
-          "legendFormat": "{{mcp_server_name}}"
+          "legendFormat": "{{command_category}}"
         }
       ],
       "fieldConfig": {
@@ -5847,13 +5684,13 @@
           "color": {
             "mode": "palette-classic"
           },
-          "unit": "short"
+          "unit": "bytes"
         },
         "overrides": []
       },
       "options": {
         "legend": {
-          "displayMode": "list",
+          "displayMode": "table",
           "placement": "right",
           "values": [
             "percent",
@@ -5871,16 +5708,17 @@
       }
     },
     {
-      "id": 1106,
-      "title": "MCP tool usage (server / tool)",
-      "type": "table",
+      "id": 1103,
+      "title": "Token share by MCP server",
+      "description": "Token share proxy: sums tool_result_size_bytes, the result payload that re-enters context as input tokens next turn (~bytes/4). Pie % = share of tokens. Tool calls carry no real token field, this is the closest signal.",
+      "type": "piechart",
       "datasource": {
         "type": "loki",
         "uid": "loki"
       },
       "gridPos": {
-        "x": 8,
-        "y": 234,
+        "x": 16,
+        "y": 85,
         "w": 8,
         "h": 9
       },
@@ -5891,7 +5729,63 @@
             "uid": "loki"
           },
           "editorMode": "code",
-          "expr": "sum by (mcp_server_name, tool_name) (count_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`tool_result` | mcp_server_name!=\"\" [$__range]))",
+          "expr": "sum by (mcp_server_name) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`tool_result` | mcp_server_name!=\"\" | tool_result_size_bytes!=\"\" | unwrap tool_result_size_bytes [$__range]))",
+          "queryType": "instant",
+          "refId": "A",
+          "legendFormat": "{{mcp_server_name}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "unit": "bytes"
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": {
+          "displayMode": "table",
+          "placement": "right",
+          "values": [
+            "percent",
+            "value"
+          ]
+        },
+        "pieType": "donut",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        }
+      }
+    },
+    {
+      "id": 1104,
+      "title": "Bash command kinds (token weight)",
+      "description": "Result bytes (~tokens) per Bash command kind. Token share proxy: sums tool_result_size_bytes, the result payload that re-enters context as input tokens next turn (~bytes/4). Pie % = share of tokens. Tool calls carry no real token field, this is the closest signal.",
+      "type": "table",
+      "datasource": {
+        "type": "loki",
+        "uid": "loki"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 94,
+        "w": 12,
+        "h": 7
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "loki"
+          },
+          "editorMode": "code",
+          "expr": "sum by (command_category) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`bash_command` | result_size_bytes!=\"\" | unwrap result_size_bytes [$__range]))",
           "queryType": "instant",
           "refId": "A"
         }
@@ -5908,7 +5802,7 @@
               "Time": true
             },
             "renameByName": {
-              "Value": "calls"
+              "Value": "result bytes (~tokens)"
             }
           }
         }
@@ -5917,27 +5811,35 @@
         "defaults": {
           "color": {
             "mode": "thresholds"
-          }
+          },
+          "unit": "bytes"
         },
         "overrides": []
       },
       "options": {
-        "showHeader": true
+        "showHeader": true,
+        "sortBy": [
+          {
+            "displayName": "result bytes (~tokens)",
+            "desc": true
+          }
+        ]
       }
     },
     {
-      "id": 1107,
-      "title": "MCP calls over time by server",
-      "type": "timeseries",
+      "id": 1105,
+      "title": "MCP tools (token weight)",
+      "description": "Result bytes (~tokens) per MCP server/tool. Token share proxy: sums tool_result_size_bytes, the result payload that re-enters context as input tokens next turn (~bytes/4). Pie % = share of tokens. Tool calls carry no real token field, this is the closest signal.",
+      "type": "table",
       "datasource": {
         "type": "loki",
         "uid": "loki"
       },
       "gridPos": {
-        "x": 16,
-        "y": 234,
-        "w": 8,
-        "h": 9
+        "x": 12,
+        "y": 94,
+        "w": 12,
+        "h": 7
       },
       "targets": [
         {
@@ -5946,36 +5848,45 @@
             "uid": "loki"
           },
           "editorMode": "code",
-          "expr": "sum by (mcp_server_name) (count_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`tool_result` | mcp_server_name!=\"\" [$__interval]))",
-          "queryType": "range",
-          "refId": "A",
-          "legendFormat": "{{mcp_server_name}}"
+          "expr": "sum by (mcp_server_name, tool_name) (sum_over_time({service_name=~\"$source\"} | user_email=~\"$member\" | event_name=`tool_result` | mcp_server_name!=\"\" | tool_result_size_bytes!=\"\" | unwrap tool_result_size_bytes [$__range]))",
+          "queryType": "instant",
+          "refId": "A"
+        }
+      ],
+      "transformations": [
+        {
+          "id": "labelsToFields",
+          "options": {}
+        },
+        {
+          "id": "organize",
+          "options": {
+            "excludeByName": {
+              "Time": true
+            },
+            "renameByName": {
+              "Value": "result bytes (~tokens)"
+            }
+          }
         }
       ],
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "mode": "thresholds"
           },
-          "unit": "short",
-          "custom": {
-            "drawStyle": "line",
-            "fillOpacity": 10,
-            "stacking": {
-              "mode": "normal"
-            }
-          }
+          "unit": "bytes"
         },
         "overrides": []
       },
       "options": {
-        "legend": {
-          "displayMode": "list",
-          "placement": "bottom"
-        },
-        "tooltip": {
-          "mode": "multi"
-        }
+        "showHeader": true,
+        "sortBy": [
+          {
+            "displayName": "result bytes (~tokens)",
+            "desc": true
+          }
+        ]
       }
     }
   ],
